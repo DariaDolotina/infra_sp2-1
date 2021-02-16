@@ -1,5 +1,9 @@
 # API приложения YaMDB
 
+## :wrench: Стек
+- каркас: django, django-restframework, simple jwt 
+- деплой: docker, wsgi (gunicorn), nginx 
+
 ## :rocket: Инструкция по развертыванию приложения на своей машине
 
 1. Убедиться, что на локальной машине установлен и запущен Docker.
