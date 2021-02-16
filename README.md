@@ -14,6 +14,7 @@
 
 Чек-лист команд:
 - **`git clone https://github.com/stasyao/infra_sp2/`**
+- **`cd infra_sp2/`**
 - **`docker-compose up -d`**
 - **`docker-compose exec web python manage.py createsuperuser`**
 - **`docker-compose exec web python manage.py loaddata fixtures.json`**
