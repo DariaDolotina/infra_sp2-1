@@ -6,7 +6,7 @@ ENV PYTHONBUFFERED 1
 WORKDIR /code
 COPY requirements.txt /code
 
-RUN pip install -r /code/requirements.txt --no-cache-dir
+RUN apk update && apk add postgresql-dev gcc python3-dev musl-dev && pip install -r /code/requirements.txt --no-cache-dir
 
 COPY . /code
 
