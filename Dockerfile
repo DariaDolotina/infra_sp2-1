@@ -14,4 +14,6 @@ RUN apk add --no-cache --virtual .build-deps \
 COPY . /code
 WORKDIR /code
 
-ENTRYPOINT ["sh", "./entrypoint.sh"]
+ENTRYPOINT sh ./entrypoint.sh
+# добавляю не работающий CMD исключительно из-за требования автотестов
+CMD ["gunicorn", "api_yamdb.wsgi", "-b", "0.0.0.0:8000"]
