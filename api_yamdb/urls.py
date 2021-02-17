@@ -11,7 +11,7 @@ urlpatterns = [
 
     # Логин и логаут для более удобной работы с browsable API
     path('api-auth/', include('rest_framework.urls')),
-    
+
     # Эндпоинты
     path('api/', include('users_api_app.urls')),
     path('api/', include('title_api_app.urls')),
