@@ -8,14 +8,16 @@
 
 1. Убедиться, что на локальной машине установлен и запущен Docker.
 2. Клонировать репозиторий в любое место на машине **`git clone https://github.com/stasyao/infra_sp2/`**
-3. В скопированной папке зайти в терминал, собрать и запустить докер-контейнер **`docker-compose up -d`**
-4. Создать суперпользователя для доступа в админку **`docker-compose exec web python manage.py createsuperuser`**. Потребуется ввести email и задать пароль.
-5. Чтобы сразу ознакомиться с возможностями приложения, можно загрузить готовый набор тестовых данных для всех моделей **`docker-compose exec web python manage.py loaddata fixtures.json`**
+4. В скопированной папке зайти в терминал, собрать и запустить докер-контейнер **`docker-compose up -d`**
+5. Сделать первоначальные миграции и собрать статику **`docker-compose exec web sh ./entrypoint.sh`**
+6. Создать суперпользователя для доступа в админку **`docker-compose exec web python manage.py createsuperuser`**. Потребуется ввести email и задать пароль.
+7. Чтобы сразу ознакомиться с возможностями приложения, можно загрузить готовый набор тестовых данных для всех моделей **`docker-compose exec web python manage.py loaddata fixtures.json`**
 
 Чек-лист команд:
 - **`git clone https://github.com/stasyao/infra_sp2/`**
 - **`cd infra_sp2/`**
 - **`docker-compose up -d`**
+- **`docker-compose exec web sh ./entrypoint.sh`**
 - **`docker-compose exec web python manage.py createsuperuser`**
 - **`docker-compose exec web python manage.py loaddata fixtures.json`**
 
