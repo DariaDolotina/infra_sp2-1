@@ -16,4 +16,4 @@ WORKDIR /code
 
 ENTRYPOINT sh ./entrypoint.sh
 # добавляю не работающий CMD исключительно из-за требования автотестов
-CMD ["gunicorn", "api_yamdb.wsgi", "-b", "0.0.0.0:8000"]
+CMD gunicorn api_yamdb.wsgi:application --bind 0.0.0.0:8000
